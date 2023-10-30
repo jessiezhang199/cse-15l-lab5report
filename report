@@ -1,0 +1,89 @@
+Part 1:
+
+I do the ArrayExamples for Part1. At first, I add two new Junit test to test the code, but both of them fail. 
+
+@Test
+  public void Reversed1() {
+    int[] input1 = {1,2};
+    ArrayExamples.reverseInPlace(input1);
+    assertArrayEquals(new int[]{2, 1}, input1);
+  }
+
+@Test
+  public void testReversed1() {
+    int[] input1 = {1,2};
+    assertArrayEquals(new int[]{2,1 }, ArrayExamples.reversed(input1));
+  }
+
+Two of the given Junit test did not fail.
+
+@Test 
+	public void testReverseInPlace() {
+    int[] input1 = { 3 };
+    ArrayExamples.reverseInPlace(input1);
+    assertArrayEquals(new int[]{ 3 }, input1);
+	}
+
+@Test
+  public void testReversed() {
+    int[] input1 = { };
+    assertArrayEquals(new int[]{ }, ArrayExamples.reversed(input1));
+  }
+
+The failing out put in the terminal looks like the following image:
+
+![image]
+
+After I fix the code, the out put of Junit test is like the following image:
+
+
+
+The code with bugs is looks like:
+
+public class ArrayExamples {
+
+  // Changes the input array to be in reversed order
+  static void reverseInPlace(int[] arr) {
+    for(int i = 0; i < arr.length/2; i += 1) {
+      arr[i] = arr[arr.length - i - 1];
+
+    }
+  }
+
+  // Returns a *new* array with all the elements of the input array in reversed
+  // order
+  static int[] reversed(int[] arr) {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = newArray[arr.length - i - 1];
+      
+    }
+    return arr;
+  }
+}
+
+The code after I fix it is:
+public class ArrayExamples {
+
+  // Changes the input array to be in reversed order
+  static void reverseInPlace(int[] arr) {
+    for(int i = 0; i < arr.length/2; i += 1) {
+      int a = arr[i];
+      arr[i] = arr[arr.length - i - 1];
+      arr[arr.length - i - 1] = a;
+
+    }
+  }
+
+  // Returns a *new* array with all the elements of the input array in reversed
+  // order
+  static int[] reversed(int[] arr) {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      newArray[i] = arr[arr.length - i - 1];
+      ewArray[arr.length - i - 1] = arr[i];
+      
+    }
+    return newArray;
+  }
+}
