@@ -32,11 +32,12 @@ Two of the given Junit test did not fail.
 
 The failing out put in the terminal looks like the following image:
 
-![image]
+![image](failing1.png)
+![image](failing2.png)
 
 After I fix the code, the out put of Junit test is like the following image:
 
-
+![image](success.png)
 
 The code with bugs is looks like:
 
