@@ -23,7 +23,7 @@ public void testReverseInPlace() {
     int[] input1 = { 3 };
     ArrayExamples.reverseInPlace(input1);
     assertArrayEquals(new int[]{ 3 }, input1);
-	}
+}
 
 @Test
   public void testReversed() {
@@ -41,7 +41,7 @@ After I fix the code, the out put of Junit test is like the following image:
 ![image](success.png)
 
 The code with bugs is looks like:
-
+```
 public class ArrayExamples {
 
   // Changes the input array to be in reversed order
@@ -60,9 +60,10 @@ static int[] reversed(int[] arr) {
     }
     return arr;
   }
-
+```
 
 The code after I fix it is:
+```
 public class ArrayExamples {
 
   // Changes the input array to be in reversed order
@@ -84,7 +85,7 @@ public class ArrayExamples {
     }
     return newArray;
   }
-
+```
 For the reverseInPlace(int[] arr), I found that it only change the first half of the array to reverse order, but the second half still remaind the same. Therefore, in order to change the code, we need to also change the second half of the numbers. So I use an int a to store the array number in i position, and then after it change to equal to arr[i] = arr[arr.length - i - 1], I also change arr[arr.length - i - 1] = a, so in this case, the whole array could change in reverse in place correctly. 
 
 For the reversed(int[] arr), I found that it wrote the same as reverseInPlace(int[] arr) and return the original array instead of the new array we create. So, I wrote the new array i position number equal to the number of original array in arr.length - i - 1 position, and similarly to wrote the new array arr.length - i - 1 position number equal to the number of original array in i position. 
