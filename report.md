@@ -15,9 +15,9 @@ public void testReversed1() {
     int[] input1 = {1,2};
     assertArrayEquals(new int[]{2,1 }, ArrayExamples.reversed(input1));
 }
-
+```
 Two of the given Junit tests did not fail.
-
+```
 @Test 
 public void testReverseInPlace() {
     int[] input1 = { 3 };
