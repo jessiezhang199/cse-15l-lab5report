@@ -2,7 +2,7 @@ Part 1:
 
 I do the ArrayExamples for Part1. At first, I add two new Junit tests to test the code, but both of them fail. 
 
-}
+```
 @Test
 public void Reversed1() {
     int[] input1 = {1,2};
@@ -30,8 +30,7 @@ public void testReverseInPlace() {
     int[] input1 = { };
     assertArrayEquals(new int[]{ }, ArrayExamples.reversed(input1));
   }
-  
-}
+  ```
 The failing out put in the terminal looks like the following images:
 
 ![image](failing1.png)
