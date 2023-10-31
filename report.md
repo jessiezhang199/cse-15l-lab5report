@@ -47,7 +47,6 @@ public class ArrayExamples {
   static void reverseInPlace(int[] arr) {
     for(int i = 0; i < arr.length/2; i += 1) {
       arr[i] = arr[arr.length - i - 1];
-
     }
   }
 
@@ -57,11 +56,10 @@ static int[] reversed(int[] arr) {
     int[] newArray = new int[arr.length];
     for(int i = 0; i < arr.length; i += 1) {
       arr[i] = newArray[arr.length - i - 1];
-      
     }
     return arr;
   }
-}
+
 
 The code after I fix it is:
 public class ArrayExamples {
@@ -72,7 +70,6 @@ public class ArrayExamples {
       int a = arr[i];
       arr[i] = arr[arr.length - i - 1];
       arr[arr.length - i - 1] = a;
-
     }
   }
 
@@ -83,11 +80,9 @@ public class ArrayExamples {
     for(int i = 0; i < arr.length; i += 1) {
       newArray[i] = arr[arr.length - i - 1];
       newArray[arr.length - i - 1] = arr[i];
-      
     }
     return newArray;
   }
-}
 
 For the reverseInPlace(int[] arr), I found that it only change the first half of the array to reverse order, but the second half still remaind the same. Therefore, in order to change the code, we need to also change the second half of the numbers. So I use an int a to store the array number in i position, and then after it change to equal to arr[i] = arr[arr.length - i - 1], I also change arr[arr.length - i - 1] = a, so in this case, the whole array could change in reverse in place correctly. 
 
