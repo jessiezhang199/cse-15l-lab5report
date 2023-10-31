@@ -115,9 +115,10 @@ This means that the empty option on find command not only check the directories 
 
 The second find command option I found is 'find [directory] -size Nc'. N is the number we can enter. This command help people to find the number of charactors of all the files under the direcctory. If add a + in front of N, like 'find [directory] -size +Nc', it means that find all the files under the enter directory that have more than N charactors. Similarly, if add a - in frond of N, 'find [directory] -size -Nc', it will help us to find all the files under the enter directory that have less tan N charactors.
 
+![image](sizeplus.png)
 
-in the picture, that is all the files that have greater than 30000 charactors under the directory ./technical/plos. Now we know that this option works for directory, so we need to check whether it will also works on a file. I enter one of the files with greater than 30000 charactors as the enter directory, and it shows the same file directory as enter, which shows that it can also work to check the single file. 
+In the picture, that is all the files that have greater than 30000 charactors under the directory ./technical/plos. Now we know that this option works for directory, so we need to check whether it will also works on a file. I enter one of the files with greater than 30000 charactors as the enter directory, and it shows the same file directory as enter, which shows that it can also work to check the single file. 
 
-
+![image](sizesingle.png)
 
 It is really useful when we have large number of txt files but did not know how many words they have, we can use this command to filter which files meet the requirement of words counts and which files did not. It save a lot of time to avoid to open each files to count the words.
