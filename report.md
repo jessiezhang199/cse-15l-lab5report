@@ -1,4 +1,4 @@
-Part 1:
+##Part 1:
 
 I do the ArrayExamples for Part1. At first, I add two new Junit tests to test the code, but both of them fail. 
 
@@ -93,7 +93,7 @@ newArray[i] = arr[arr.length - i - 1];
 newArray[arr.length - i - 1] = arr[i];
 In this way, the numbers in the arr will place in a reverse order in newArray correctly. And lastly return the newArray with the reverse order of arr.
 
-Part2
+##Part2
 
 I chose find command for lab report Part 2. (All of the methods are find at https://www.geeksforgeeks.org/find-command-in-linux-with-examples/)
 
