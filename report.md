@@ -123,8 +123,11 @@ It is really useful when we have large number of txt files but did not know how 
 ### 3. -type d
 The third find command option I found is 'find [directory] -type d'. It find all the directories under the enter directory but can reach much deeper level. Dislike ls, which only shows one level deep directory and files, -type d shows all deeper level from the directories we enter without files. If we want to shows all the files under the enter directory, we can simply change d to f, and all the files under the enter directory will appear. 
 
+![image](typed.png)
 
 I try to enteer file path as direcory, I expect that terminal might return error, but surprisely, it did not return error and return nothing. I think because I enter -type d, so it only return directories. So I try to change d to f, it return the file path I enter. 
 
+![image](typedonfile.png)
+![image](typefonfile.png)
 
 It is really useful if we want to find the specify directory but we forgot, we can use this way to recall our memery. It will save lots of time, so we do not need to try every single directory to figure out the one that we want to go to. 
