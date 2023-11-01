@@ -131,3 +131,6 @@ I try to enteer file path as direcory, I expect that terminal might return error
 ![image](typefonfile.png)
 
 It is really useful if we want to find the specify directory but we forgot, we can use this way to recall our memery. It will save lots of time, so we do not need to try every single directory to figure out the one that we want to go to. 
+
+### 4.  -name --.txt -exec rm -i {} \;
+The last one find command option I found is using find to find the file and than delete it. 
