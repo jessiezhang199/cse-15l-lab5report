@@ -96,7 +96,7 @@ In this way, the numbers in the arr will place in a reverse order in newArray co
 ## Part2
 
 I chose find command for lab report Part 2. (All of the methods are find at https://www.geeksforgeeks.org/find-command-in-linux-with-examples/)
-
+### 1. -empty
 The first one interested find command option is find [directory] -empty. This method find the empty files and directory in the directory we enter. So I test on ./technical with the command 'find ./technical -empty', it did not have any file or directory appear. Therefore, I assum that there might not have empty file under the ./technical directory.
 
 ![image](noempty.png)
@@ -109,7 +109,7 @@ Therefore, If there is a directory, it will check the next level files and direc
 
 ![image](emptyonfile.png)
 This means that the empty option on find command not only check the directories and files in next level of the directory we enter, also check the directory level we enter. It is useful if we know that there is a lot of files under a directory and we need to find whether there are empty files exist. It is convinience and we do not need to open each file to check, one command is enough. 
-
+### 2. -size N
 The second find command option I found is 'find [directory] -size Nc'. N is the number we can enter. This command help people to find the number of charactors of all the files under the direcctory. If add a + in front of N, like 'find [directory] -size +Nc', it means that find all the files under the enter directory that have more than N charactors. Similarly, if add a - in frond of N, 'find [directory] -size -Nc', it will help us to find all the files under the enter directory that have less tan N charactors.
 
 ![image](sizeplus.png)
@@ -119,3 +119,12 @@ In the picture, that is all the files that have greater than 30000 charactors un
 ![image](sizesingle.png)
 
 It is really useful when we have large number of txt files but did not know how many words they have, we can use this command to filter which files meet the requirement of words counts and which files did not. It save a lot of time to avoid to open each files to count the words.
+
+### 3. -type d
+The third find command option I found is 'find [directory] -type d'. It find all the directories under the enter directory but can reach much deeper level. Dislike ls, which only shows one level deep directory and files, -type d shows all deeper level from the directories we enter without files. If we want to shows all the files under the enter directory, we can simply change d to f, and all the files under the enter directory will appear. 
+
+
+I try to enteer file path as direcory, I expect that terminal might return error, but surprisely, it did not return error and return nothing. I think because I enter -type d, so it only return directories. So I try to change d to f, it return the file path I enter. 
+
+
+It is really useful if we want to find the specify directory but we forgot, we can use this way to recall our memery. It will save lots of time, so we do not need to try every single directory to figure out the one that we want to go to. 
