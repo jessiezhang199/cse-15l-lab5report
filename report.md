@@ -135,10 +135,11 @@ It is really useful if we want to find the specify directory but we forgot, we c
 ### 4.  -name --.txt -exec rm -i {} \;
 The last one find command option I found is using find to find the file and than delete it. The format of this command is "find [directory] -name filename.txt -exec rm -i {} \". If we try to delete a not exist file, it will return nothing. But if we delete a exist file, it will return a question of whether we want to delete the file. If we answer Y/y, it will delete immediately for us. If we answer N/n, it will not do anything. 
 
-
+![image](deletenotexist.png)
+![image](deleteexist.png)
 
 I try to enter file path as directory, It can also return the same as directory: if the file exist and accessable form the directory or path, it will return a sentence which ask you whether want to delete the file. If the file is not existed and accessable, it will also return not thing.
 
-
+![image](deletefilepath.png)
 
 This method is useful when there are tune of files and it is to hard to find it by eyes. If we remember the name of the file, we can use this way to delete it instead of spanding a lot of time to look at each file's name to find the one we want. 
