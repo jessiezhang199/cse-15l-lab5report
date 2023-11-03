@@ -125,7 +125,7 @@ The third find command option I found is 'find [directory] -type d'. It find all
 
 ![image](typed.png)
 
-I try to enteer file path as direcory, I expect that terminal might return error, but surprisely, it did not return error and return nothing. I think because I enter -type d, so it only return directories. So I try to change d to f, it return the file path I enter. 
+I try to enter file path as directory, I expect that terminal might return error, but surprisely, it did not return error and return nothing. I think because I enter -type d, so it only return directories. So I try to change d to f, it return the file path I enter. 
 
 ![image](typedonfile.png)
 ![image](typefonfile.png)
@@ -133,4 +133,12 @@ I try to enteer file path as direcory, I expect that terminal might return error
 It is really useful if we want to find the specify directory but we forgot, we can use this way to recall our memery. It will save lots of time, so we do not need to try every single directory to figure out the one that we want to go to. 
 
 ### 4.  -name --.txt -exec rm -i {} \;
-The last one find command option I found is using find to find the file and than delete it. 
+The last one find command option I found is using find to find the file and than delete it. The format of this command is "find [directory] -name filename.txt -exec rm -i {} \". If we try to delete a not exist file, it will return nothing. But if we delete a exist file, it will return a question of whether we want to delete the file. If we answer Y/y, it will delete immediately for us. If we answer N/n, it will not do anything. 
+
+
+
+I try to enter file path as directory, It can also return the same as directory: if the file exist and accessable form the directory or path, it will return a sentence which ask you whether want to delete the file. If the file is not existed and accessable, it will also return not thing.
+
+
+
+This method is useful when there are tune of files and it is to hard to find it by eyes. If we remember the name of the file, we can use this way to delete it instead of spanding a lot of time to look at each file's name to find the one we want. 
